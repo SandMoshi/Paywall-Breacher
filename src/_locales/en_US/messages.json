@@ -1,0 +1,10 @@
+{
+  "extName": {
+    "message": "Paywall Breacher",
+    "description": "Extension Name"
+  },
+  "useArchive": {
+    "message": "use archive.is",
+    "description": "Button text"
+  }
+}
