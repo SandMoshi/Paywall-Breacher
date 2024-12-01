@@ -1,3 +1,5 @@
+let removeSearchQuery;
+
 async function getCurrentTab() {
   const queryOptions = { active: true, currentWindow: true };
   const [tab] = await chrome.tabs.query(queryOptions);
@@ -9,23 +11,28 @@ const redirectToArchiveIs = () => {
     if (currentTab.url) {
       const currentTabId = currentTab.id;
       const currentUrl = currentTab.url;
-      const newUrl = `https://archive.is/${currentUrl}`;
-      console.log(`attempt redirect to: ${newUrl}`);
-      chrome.tabs.update(currentTabId, { url: newUrl });
-      // chrome.tabs.sendMessage(currentTabId, {
-      //   message: "redirectToArchiveIs",
-      //   currentUrl,
-      // });
+      const newUrl = new URL(`https://archive.is/${currentUrl}`);
+      if (removeSearchQuery != false) {
+        newUrl.search = "";
+      }
+      console.log(`attempting to redirect to: ${newUrl.toString()}`);
+      chrome.tabs.update(currentTabId, { url: newUrl.toString() });
     }
   });
 };
 
 const archiveisButton = document.getElementsByClassName("archiveisbutton")[0];
-console.log("SAND", archiveisButton);
+const removeSearchQueryCheckbox = document.getElementById(
+  "searchQueryCheckbox"
+);
 
 archiveisButton.addEventListener("click", (event) => {
   console.log(`archive.is button clicked!`);
   redirectToArchiveIs(event.currentTarget, event.target);
+});
+
+removeSearchQueryCheckbox.addEventListener("change", (event) => {
+  removeSearchQuery = event.target.checked;
 });
 
 function localizeStrings() {

@@ -4,7 +4,19 @@
     "description": "Extension Name"
   },
   "useArchive": {
-    "message": "use archive.is",
+    "message": "Open with archive.is",
     "description": "Button text"
+  },
+  "settingsNews": {
+    "message": "Articles (News, Blogs)",
+    "description": "Header"
+  },
+  "removeQuery": {
+    "message": "Remove search query (Default ON)",
+    "description": "Checkbox to remove search query"
+  },
+  "supportProject": {
+    "message": "Want to support this project?",
+    "description": "heading for support"
   }
 }
