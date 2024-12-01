@@ -43,12 +43,3 @@ function localizeStrings() {
 }
 
 localizeStrings();
-
-function loadPreviousSettings() {
-  console.log("load previous settings");
-  // retrieve from local storage and act upon them here
-}
-
-window.onload = () => {
-  loadPreviousSettings();
-};

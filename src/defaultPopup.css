@@ -6,18 +6,6 @@ body {
   max-width: 400px;
 }
 
-.backgroundImage {
-  background-image: url(assets/sean-foley-SEfbeMpjxaM-unsplash.jpg);
-  filter: blur(9px);
-  position: absolute;
-  width: 120%;
-  height: 120%;
-  background-size: cover;
-  left: -20px;
-  top: -20px;
-  z-index: -1;
-}
-
 .extensionTopBar {
   width: 110%;
   text-align: center;

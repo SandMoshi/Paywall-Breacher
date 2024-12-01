@@ -4,9 +4,6 @@
   "default_locale": "en_US",
   "version": "1.1.1",
   "manifest_version": 3,
-  "background": {
-    "service_worker": "background.js"
-  },
   "permissions": ["activeTab", "tabs"],
   "host_permissions": [],
   "action": {
