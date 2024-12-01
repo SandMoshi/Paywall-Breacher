@@ -12,12 +12,12 @@
   "action": {
     "default_popup": "defaultPopup.html",
     "default_icon": {
-      "16": "/icons/cherrybomb-remix.svg",
-      "32": "/icons/cherrybomb-remix.svg"
+      "16": "/icons/cherrybomb-remix-16x16.png"
     }
   },
   "icons": {
-    "16": "/icons/cherrybomb-remix.svg",
-    "32": "/icons/cherrybomb-remix.svg"
+    "16": "/icons/cherrybomb-remix-16x16.png",
+    "48": "/icons/cherrybomb-remix-48x48.png",
+    "128": "/icons/cherrybomb-remix-128x128.png"
   }
 }

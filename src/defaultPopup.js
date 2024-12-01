@@ -26,10 +26,11 @@ const removeSearchQueryCheckbox = document.getElementById(
   "searchQueryCheckbox"
 );
 
-archiveisButton.addEventListener("click", (event) => {
-  console.log(`archive.is button clicked!`);
-  redirectToArchiveIs(event.currentTarget, event.target);
-});
+archiveisButton &&
+  archiveisButton.addEventListener("click", (event) => {
+    console.log(`archive.is button clicked!`);
+    redirectToArchiveIs(event.currentTarget, event.target);
+  });
 
 removeSearchQueryCheckbox.addEventListener("change", (event) => {
   removeSearchQuery = event.target.checked;
